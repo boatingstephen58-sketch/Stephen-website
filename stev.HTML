@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html></html>
+<head><title>EARTH ROTATON</title></head>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black
+        
+}
+        .container {
+            font-size: 10px;
+            width: 40cm;
+            height: 40cm;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sun {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0.5);
+            z-index: 3;
+        }           
+        .earth, .moon {
+            position: absolute;
+            border-style: solid;
+            border-color: white transparent;
+            border-width: 0.1cm;
+            border-radius: 50%;
+ }
+        .earth {
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            animation: orbitEarth 36.5s linear infinite;
+            transform-origin: -10cm center;
+            z-index: 2;
+        }
+        .moon {
+            width: 15px;
+            height: 15px;
+            background-color: rgb(102, 102, 140);
+            animation: orbitMoon 2.7s linear infinite;
+            transform-origin: -3cm center;
+            z-index: 1;
+        }
+        @keyframes orbitEarth {
+            from { transform: rotate(0deg) translateX(10cm) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(10cm) rotate(-360deg); }
+        }
+        @keyframes orbitMoon {
+            from { transform: rotate(0deg) translateX(3cm) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(3cm) rotate(-360deg); }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class = "container"></div>
+    <div class = "sun"></div>
+    <div class = "earth"></div>
+    <div class = "moon"></div>
+</body>
+</html>
